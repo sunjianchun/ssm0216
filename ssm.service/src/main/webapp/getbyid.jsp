@@ -21,7 +21,7 @@
         IUserServiceImpl iUserServiceImpl = (IUserServiceImpl) applicationContext.getBean("iUserServiceImpl");
         Integer id = Integer.parseInt(request.getParameter("id"));
         User user = iUserServiceImpl.getById(id);
-        out.println(user.toString1());
+        out.println(user.toString());
     %>
 
 </body>

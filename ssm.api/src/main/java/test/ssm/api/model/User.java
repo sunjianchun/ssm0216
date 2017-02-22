@@ -42,8 +42,13 @@ public class User {
         this.sex = sex;
     }
 
-   // @Override
-    public String toString1(){
-        return "姓名：" + this.username + " 性别：" + this.sex + "地址：" + this.address;
+    @Override
+    public String toString(){
+        return "User{" +
+                "id=" + id +
+                ", username=" + username +
+                ", address=" + address +
+                ", sex=" + sex +
+                "}";
     }
 }

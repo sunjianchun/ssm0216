@@ -16,15 +16,7 @@
 <html>
 <head>
     <title>分页功能页面</title>
-    <h3>用户信息表</h3>
-
-    <table border="1px">
-        <tr>
-            <td>ID</td>
-            <td>姓名</td>
-            <td>性别</td>
-            <td>住址</td>
-        </tr>
+</head>
         <%
             WebApplicationContext applicationContext = WebApplicationContextUtils.getRequiredWebApplicationContext(request.getSession().getServletContext());
             IUserServiceImpl iUserServiceImpl = (IUserServiceImpl) applicationContext.getBean("iUserServiceImpl");
@@ -34,21 +26,8 @@
             PageBean<User> pageBean = iUserServiceImpl.getList(pageNum, length);
 
             List<User> list = pageBean.getData();
-            for (User user: list) {
         %>
-                <tr >
-                    <td ><% out.println(user.getId()); %></td >
-                    <td ><% out.println(user.getUsername()); %></td >
-                    <td ><% out.println(user.getSex()); %></td >
-                    <td ><% out.println(user.getAddress()); %></td >
-                </tr >
-        <%
-            }
-        %>
-
-    </table>
-
-</head>
+        <%= pageBean %>
 <body>
 
 </body>

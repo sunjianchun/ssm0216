@@ -27,7 +27,6 @@ public class UserData extends BaseData{
         UserDomain userDomain = iUserMapper.getById(id);
         System.out.println(id);
         BeanUtils.copyProperties(user, userDomain);
-        System.out.println(user.toString1());
         return user;
     }
 
