@@ -34,15 +34,13 @@
             PageBean<User> pageBean = iUserServiceImpl.getList(pageNum, length);
 
             List<User> list = pageBean.getData();
-            User user = null;
-            for (User user1: list) {
-                user = user1;
+            for (User user: list) {
         %>
                 <tr >
-                    <td ><% user.getId(); %></td >
-                    <td ><% user.getUsername(); %></td >
-                    <td ><% user.getSex(); %></td >
-                    <td ><% user.getAddress(); %></td >
+                    <td ><% out.println(user.getId()); %></td >
+                    <td ><% out.println(user.getUsername()); %></td >
+                    <td ><% out.println(user.getSex()); %></td >
+                    <td ><% out.println(user.getAddress()); %></td >
                 </tr >
         <%
             }
