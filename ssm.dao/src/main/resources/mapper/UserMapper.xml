@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test.ssm.dao.mapper.IUserMapper">
+    <!-- 通过id查询 -->
+    <select id="getById" parameterType="java.lang.Integer" resultType="test.ssm.dao.domain.UserDomain" >
+        SELECT * FROM t_user WHERE id=#{id}
+    </select>
+
+    <select id="getList" resultType="test.ssm.dao.domain.UserDomain" >
+        SELECT * FROM t_user ORDER BY id
+    </select>
+
+</mapper>
