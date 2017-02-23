@@ -1,14 +1,17 @@
 package test.ssm.api.model;
 
 
+import java.io.Serializable;
+
 /**
  * Created by sunjianchun on 17/2/16.
  */
-public class User {
+public class User implements Serializable{
     private Integer id;
     private String username;
     private String address;
     private String sex;
+    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;

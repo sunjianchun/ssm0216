@@ -13,9 +13,11 @@
             <list>
                 <value>classpath*:db.properties</value>
                 <value>classpath*:log4j.properties</value>
+                <value>classpath*:config.properties</value>
             </list>
         </property>
     </bean>
 
     <import resource="classpath*:spring-data.xml" />
+    <import resource="classpath*:service-provider.xml" />
 </beans>
